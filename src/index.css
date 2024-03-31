@@ -1,0 +1,248 @@
+/*Limpiar en todas paginas margin y padding*/
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+body {
+  font-family: "Roboto", sans-serif;
+  color: black;
+}
+
+header .navegador {
+  height: 15vh;
+  color: white;
+  background-color: rgb(65, 54, 89);
+}
+header .navegador .imagenLogo {
+  width: 60px;
+}
+header .navegador .nav-link {
+  color: white;
+  padding: 10px;
+  border-radius: 10px;
+}
+header .navegador .nav-link:hover {
+  color: black;
+  background-color: white;
+  border-radius: 10px;
+}
+header .navegador .nav-link.active.blanco {
+  text-decoration: underline;
+  color: white;
+}
+header .navegador .nav-link.active.blanco:hover {
+  color: black;
+}
+header .navegador .nav-link.blanco {
+  color: white;
+}
+header .navegador .custom-toggler.navbar-toggler {
+  border-color: white;
+  color: white;
+}
+header .navegador .navbar-toggler-icon {
+  border-color: white;
+  color: white;
+}
+
+/*
+.navbar-light .navbar-nav .nav-link.blanco {
+    color:$color-blanco;
+}
+*/
+main .banner {
+  background-color: rgb(65, 54, 89);
+  overflow: hidden;
+}
+main .bannerBlock {
+  grid-column-gap: 90px;
+  grid-row-gap: 90px;
+}
+
+@media screen and (max-width: 991px) {
+  header .navegador {
+    height: initial;
+  }
+  header .tituloHeader {
+    display: block !important;
+  }
+}
+#pot {
+  bottom: 15%;
+  position: relative;
+  background-color: rgb(65, 54, 89);
+  transform-style: preserve-3d;
+  animation-direction: alternate-reverse;
+  -webkit-animation: linear infinite;
+  -webkit-animation-name: run;
+  -webkit-animation-duration: 10s;
+}
+
+@-webkit-keyframes run {
+  0% {
+    left: 0;
+  }
+  50% {
+    left: 100%;
+  }
+  100% {
+    left: 0;
+  }
+  /*
+  0% {
+    right: 0;
+  }
+  48% {
+    -webkit-transform: rotateY(0deg); 
+  }
+  50% { 
+      right: calc(100% - 50px);
+  }
+  98% {
+  }
+  100% {
+      right: 0;    
+     -webkit-transform: rotateY(0deg);
+  }
+  */
+}
+.carousel-inner {
+  height: 50vh;
+  padding-bottom: 30%; /* this sets carousel aspect ratio (4:1 here) */
+}
+
+.carousel-item {
+  position: absolute !important; /* Bootstrap is insistent */
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.carousel-item img {
+  height: 100%; /* Bootstrap handles width already */
+  object-fit: cover; /* or 'contain' if you want stretch instead of crop */
+}
+
+.tarjetaIndex {
+  height: 40vh;
+}
+
+.tarjetaIndex img {
+  object-fit: cover;
+}
+
+.textLight:hover {
+  background: rgb(65, 54, 89);
+  -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+  /*box-shadow: 0 0 5px #ff96ad, 0 0 25px #ff96ad, 0 0 50px #ff96ad, 0 0 200px #ff96ad;*/
+  color: black;
+}
+
+.float {
+  position: fixed;
+  width: 60px;
+  height: 60px;
+  bottom: 40px;
+  right: 40px;
+  background-color: #25d366;
+  color: #FFF;
+  border-radius: 50px;
+  text-align: center;
+  font-size: 30px;
+  box-shadow: 2px 2px 3px #999;
+  z-index: 100;
+}
+
+.my-float {
+  margin-top: 16px;
+}
+
+/* for images to be same height */
+.img-same-height {
+  object-fit: cover;
+  width: 400px;
+  height: 250px;
+}
+
+.gallery-item {
+  margin-bottom: 20px;
+}
+
+.gallery-item img {
+  border-radius: 8px;
+  transition: transform 0.3s ease-in-out;
+}
+
+.gallery-item img:hover {
+  transform: scale(1.1);
+}
+
+.map-responsive {
+  overflow: hidden;
+  padding-bottom: 56.25%;
+  position: relative;
+  height: 0;
+}
+
+.map-responsive iframe {
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+}
+
+.colorb {
+  background-color: yellow;
+}
+
+@media screen and (max-width: 991px) {
+  .carousel {
+    width: 100%;
+    height: 100%;
+  }
+}
+.footer {
+  color: white;
+  background-color: rgb(65, 54, 89);
+  padding: 10px;
+  text-align: center;
+  border-radius: 5px;
+}
+.footer .icon {
+  font-size: 3rem;
+  color: #e9d3f8;
+  padding-right: 15px;
+}
+.footer .contenedorIconos {
+  display: inline-block;
+}
+.footer .contenedorMapa {
+  display: inline-block;
+}
+.footer .contenedorMapa .mapa {
+  width: 250px;
+  height: 200px;
+  border-radius: 5%;
+}
+.footer .contenedorInfo p {
+  /*uso de mixin*/
+  font-size: 1rem;
+  font-style: normal;
+  text-align: center;
+}
+.footer .direccion {
+  /*uso de mixin*/
+  font-size: 1rem;
+  font-style: normal;
+  font-weight: 250;
+  line-height: 1.75;
+  color: white;
+}
+
